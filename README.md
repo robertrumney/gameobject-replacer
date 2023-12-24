@@ -4,9 +4,9 @@
 
 ## Features
 
-- **Replace Multiple Objects**: Select and replace multiple objects in the hierarchy in one go.
+- **Replace Multiple GameObjects**: Select and replace multiple GameObjects in the hierarchy in one go.
 - **Match Transformations**: Choose to match the position, rotation, and scale of the original objects.
-- **Non-destructive**: Uses Unity's `Undo` system to ensure the operations are reversible and no hidden objects remain in the scene.
+- **Non-destructive**: Uses Unity's `Undo` system to ensure the operations are reversible.
 - **Edit Mode Only**: Ensures that replacements can only be done in Edit mode to prevent accidental changes during Play mode.
 
 ## Installation
