@@ -15,9 +15,8 @@ public class GameObjectReplacer : EditorWindow
         window.Show();
     }
 
-    void OnGUI()
+    private void OnGUI()
     {
-        // Ensure it only works in Edit mode
         if (EditorApplication.isPlaying)
         {
             EditorGUILayout.HelpBox("GameObject Replacer only works in Edit mode!", MessageType.Warning);
@@ -36,7 +35,7 @@ public class GameObjectReplacer : EditorWindow
         }
     }
 
-    void ReplaceSelectedObjects()
+    private void ReplaceSelectedObjects()
     {
         if (prefab == null)
         {
@@ -44,7 +43,6 @@ public class GameObjectReplacer : EditorWindow
             return;
         }
 
-        // Using Undo to ensure no hidden objects remain in the scene
         Undo.RecordObjects(Selection.gameObjects, "Replace With Prefab");
 
         foreach (GameObject go in Selection.gameObjects)
